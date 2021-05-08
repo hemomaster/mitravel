@@ -259,6 +259,7 @@ body {
   @extend .section;
   height: 100vh;
   min-height: 568px;
+  max-height: 1080px;
 }
 
 .section-title {
