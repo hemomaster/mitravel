@@ -1,0 +1,78 @@
+/* *******************************
+OTHER
+******************************* */
+$base: 4px;
+$point-size: 10px;
+
+/* *******************************
+COLORS
+******************************* */
+$colors: (
+  black-color: #000,
+  white-color: #fff,
+  dark-color: #1c2e3d,
+  accent-color: #e8594e,
+  neptune-color: #73afba,
+  accent-hover-color: #e31d0e,
+  neptune-hover-color: #4196a6,
+  alto-color: #e0e0e0,
+  limed-spruce-color: #3c4a51,
+  slate-gray-color: #788692,
+);
+/* *******************************
+FONTS
+******************************* */
+$prodisplay-font: "SFProDisplay", sans-serif;
+$text-font: "SFCompact", sans-serif;
+$protext-font: "SFProText", sans-serif;
+
+$fontsize: (
+  xs: 14px,
+  sm: 16px,
+  md: 20px,
+  lg: 24px,
+  xl: 36px,
+  xxl: 60px,
+  xxxl: 110px,
+);
+
+$fontweidth: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+  extra-bold: 800,
+  black: 900,
+);
+/* *******************************
+BREAKPOINTS
+******************************* */
+// ОТ и выше
+$breakpoints: (
+  xxxs: 0,
+  xxs: 375px,
+  xs: 414px,
+  sm: 576px,
+  md: 768px,
+  lg: 800px,
+  xl: 992px,
+  xxl: 1024px,
+  xxxl: 1200px,
+  xxxxl: 1440px,
+);
+
+// ДО
+$breakpoints-to: (
+  xxs: map-get($breakpoints, xxs) - 0.02,
+  xs: map-get($breakpoints, xs) - 0.02,
+  sm: map-get($breakpoints, sm) - 0.02,
+  md: map-get($breakpoints, md) - 0.02,
+  lg: map-get($breakpoints, lg) - 0.02,
+  xl: map-get($breakpoints, xl) - 0.02,
+  xxl: map-get($breakpoints, xxl) - 0.02,
+  xxxl: map-get($breakpoints, xxxl) - 0.02,
+  xxxxl: map-get($breakpoints, xxxxl) - 0.02,
+);

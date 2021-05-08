@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- 
+  Верстка сайта с нуля до выгрузки на хостинг. Адаптивная верстка из Figma.
+  https://www.youtube.com/playlist?list=PLCMvV-acWe2A9tnbX678kJ5j9KdHtZSnV
+
+  Часть №6
+  https://youtu.be/WtfsH1DND6Y?t=6
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiTravel</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <script src="./js/main.min.js" defer></script>
+  </head>
+
+  <body>
+    <div class="wrapper site-container">
+      <header class="header">
+        <div class="container header__container">
+          <ul class="list-reset header__social social">
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="go to facebook">
+                <svg class="icon icon-facebook">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-facebook"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="go to twitter">
+                <svg class="icon icon-twitter">
+                  <use xlink:href="./images/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="header__logo logo">mitravel</a>
+          <button
+            class="btn-reset header__burger burger"
+            type="button"
+            aria-label="open menu"
+          >
+            <svg class="icon icon-burger">
+              <use xlink:href="./images/symbol-defs.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="main">
+        <section class="special-section hero">
+          <div class="container hero__container">
+            <article class="hero__content">
+              <span class="hero__content-label label-info">new book</span>
+              <h1 class="hero__content-title">
+                Mother Earth Hosts Our Travels
+              </h1>
+              <p class="hero__content-lead">
+                There are not many cities that have experienced such social and
+                political extremes in recent history as Amsterdam. In the 20th
+                century alone, Amsterdam faced the atrocities of war for the
+                first time in 400 years, became the radical center of 1960s
+                social movements and witnessed a complete
+              </p>
+              <button
+                class="btn-reset btn-primary btn-primary--accent"
+                type="button"
+              >
+                buy the book
+              </button>
+            </article>
+            <div class="hero__bottom">
+              <form
+                class="hero__bottom-form search-form"
+                action="server.php"
+                method="get"
+              >
+                <input
+                  class="search-form__field"
+                  type="text"
+                  name="search"
+                  placeholder="Search stories"
+                />
+                <button
+                  class="btn-reset search-form__submit"
+                  type="submit"
+                  aria-label="search text"
+                >
+                  <svg class="icon icon-search">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-search"
+                    ></use>
+                  </svg>
+                </button>
+              </form>
+              <div class="hero__bottom-slider main-slider">
+                <div class="swiper-container">
+                  <!-- <button class="btn-reset main-slider__btn btn-left"></button>
+                  <button class="btn-reset main-slider__btn btn-right"></button> -->
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="main-slider__wrapper">
+                        <div class="main-slider__media">
+                          <img src="./images/hero-slide-1.jpg" alt="image" />
+                        </div>
+                        <span class="main-slider__text">wonderful moutain</span>
+                      </div>
+                    </div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section lesson">
+          <div class="container lesson__container">
+            <h2 class="section-title lesson__title">
+              Become A Travel Pro In One Easy Lesson
+            </h2>
+            <ul class="lesson__list">
+              <li class="lesson__item">
+                <a href="#" class="lesson__link"
+                  ><img
+                    class="lesson__link-media"
+                    src="./images/lesson-image-1.jpg"
+                    alt="image lesson"
+                  /><span class="lesson__link-descr"
+                    >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Molestiae, voluptatum.</span
+                  ></a
+                >
+              </li>
+              <li class="lesson__item">
+                <a href="#" class="lesson__link"
+                  ><img
+                    class="lesson__link-media"
+                    src="./images/lesson-image-2.jpg"
+                    alt="image lesson"
+                  /><span class="lesson__link-descr"
+                    >Vacation Home Rental Success</span
+                  ></a
+                >
+              </li>
+              <li class="lesson__item">
+                <a href="#" class="lesson__link"
+                  ><img
+                    class="lesson__link-media"
+                    src="./images/lesson-image-3.jpg"
+                    alt="image lesson"
+                  /><span class="lesson__link-descr"
+                    >Vacation Home Rental Success</span
+                  ></a
+                >
+              </li>
+              <li class="lesson__item">
+                <a href="#" class="lesson__link"
+                  ><img
+                    class="lesson__link-media"
+                    src="./images/lesson-image-4.jpg"
+                    alt="image lesson"
+                  /><span class="lesson__link-descr"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam eveniet officiis repudiandae mollitia maiores
+                    accusantium!</span
+                  ></a
+                >
+              </li>
+              <li class="lesson__item">
+                <a href="#" class="lesson__link"
+                  ><img
+                    class="lesson__link-media"
+                    src="./images/lesson-image-3.jpg"
+                    alt="image lesson"
+                  /><span class="lesson__link-descr"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing.</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="special-section stories">
+          <article class="stories__article">
+            <div class="container stories__article-container">
+              <div class="stories__article-body">
+                <span
+                  class="label-info label-info--accent stories__article-label"
+                  >featured</span
+                >
+                <h3
+                  class="section-title section-title--white stories__article-title"
+                >
+                  How To Fly A Private Jet On Your Next Trip
+                </h3>
+                <p class="stories__article-lead">
+                  The state of Utah in the United States is home to lots of
+                  beautiful National Parks, & Bryce Canyon National Park ranks
+                  as three of the most magnificent & awe inspiring.
+                </p>
+                <a class="btn-primary" href="#"> read article </a>
+              </div>
+            </div>
+          </article>
+          <div class="stories__features">
+            <div class="container stories__features-container">
+              <div class="stories__features-body">
+                <h2
+                  class="section-title section-title--white stories__features-title"
+                >
+                  Featured Stories
+                </h2>
+                <ul class="list-reset stories__features-list">
+                  <li class="stories__features-item">
+                    <a href="#" class="stories__features-link">
+                      <img
+                        src="./images/avatar-1.jpg"
+                        alt="image"
+                        class="stories__features-avatar"
+                      />
+                      <div class="stories__features-info">
+                        <h4 class="stories__features-name">
+                          Do A Sporting Stag Do In Birmingham
+                        </h4>
+                        <time
+                          class="stories__features-date"
+                          datetime="2019-12-13"
+                          >13 Dec 2019</time
+                        >
+                      </div>
+                    </a>
+                  </li>
+                  <li class="stories__features-item">
+                    <a href="#" class="stories__features-link">
+                      <img
+                        src="./images/avatar-2.jpg"
+                        alt="image"
+                        class="stories__features-avatar"
+                      />
+                      <div class="stories__features-info">
+                        <h4 class="stories__features-name">
+                          From Wetlands To Canals And Dams Amsterdam Is Alive
+                        </h4>
+                        <time
+                          class="stories__features-date"
+                          datetime="2019-12-13"
+                          >13 Dec 2019</time
+                        >
+                      </div>
+                    </a>
+                  </li>
+                  <li class="stories__features-item">
+                    <a href="#" class="stories__features-link">
+                      <img
+                        src="./images/avatar-3.jpg"
+                        alt="image"
+                        class="stories__features-avatar"
+                      />
+                      <div class="stories__features-info">
+                        <h4 class="stories__features-name">
+                          Stu Unger Rise And Fall Of A Poker Genius
+                        </h4>
+                        <time
+                          class="stories__features-date"
+                          datetime="2019-12-13"
+                          >13 Dec 2019</time
+                        >
+                      </div>
+                    </a>
+                  </li>
+                  <li class="stories__features-item">
+                    <a href="#" class="stories__features-link">
+                      <img
+                        src="./images/avatar-4.jpg"
+                        alt="image"
+                        class="stories__features-avatar"
+                      />
+                      <div class="stories__features-info">
+                        <h4 class="stories__features-name">
+                          New Ideas For A Low Cost Vacation On Water
+                        </h4>
+                        <time
+                          class="stories__features-date"
+                          datetime="2019-12-13"
+                          >13 Dec 2019</time
+                        >
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section videos">
+          <div class="container videos__container">
+            <h2 class="section-title section-title--center videos__title">
+              Featured Videos
+            </h2>
+            <p class="section-description videos__description">
+              The state of Utah in the United States is home to lots of
+              beautiful National Parks, & Bryce Canyon National Park ranks as
+              three of the most magnificent & awe inspiring.
+            </p>
+          </div>
+          <div class="swiper-container slider__container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-1">
+                <button class="btn-reset videos__play" type="button">
+                  <svg class="icon icon-video-play">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-video-play"
+                    ></use>
+                  </svg>
+                </button>
+                <h3 class="slider__container-title">
+                  A Guide To Rocky Mountain Vacations
+                </h3>
+              </div>
+              <div class="swiper-slide slide-2">
+                <button class="btn-reset videos__play" type="button">
+                  <svg class="icon icon-video-play">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-video-play"
+                    ></use>
+                  </svg>
+                </button>
+                <h3 class="slider__container-title">
+                  A Guide To Rocky Mountain Vacations
+                </h3>
+              </div>
+              <div class="swiper-slide slide-3">
+                <button class="btn-reset videos__play" type="button">
+                  <svg class="icon icon-video-play">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-video-play"
+                    ></use>
+                  </svg>
+                </button>
+                <h3 class="slider__container-title">
+                  A Guide To Rocky Mountain Vacations
+                </h3>
+              </div>
+              <div class="swiper-slide slide-1">
+                <button class="btn-reset videos__play" type="button">
+                  <svg class="icon icon-video-play">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-video-play"
+                    ></use>
+                  </svg>
+                </button>
+                <h3 class="slider__container-title">
+                  A Guide To Rocky Mountain Vacations
+                </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">Footer</footer>
+    </div>
+  </body>
+</html>

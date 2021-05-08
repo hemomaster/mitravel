@@ -1,0 +1,144 @@
+.stories {
+  position: relative;
+  background: clr(alto-color) url("../../images/stories-bg.jpg") center/cover
+    no-repeat;
+
+  &__article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 57%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(28, 46, 59, 0.0001) 0%,
+        #091117 100%
+      );
+    }
+
+    &-container {
+      height: 100%;
+    }
+
+    &-body {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      height: 100%;
+      width: 41%;
+      padding-bottom: 100px;
+    }
+
+    &-label {
+      margin-bottom: 15px;
+    }
+
+    &-title {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    &-lead {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__features {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 43%;
+      background-color: rgba(clr(limed-spruce-color), 0.91);
+    }
+
+    &-container {
+      @extend %f-center;
+      justify-content: flex-end;
+      height: 100%;
+    }
+
+    &-body {
+      position: relative;
+      z-index: 1;
+      @extend %f-center;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 38.5%;
+      height: 100%;
+      padding-left: 130px;
+    }
+
+    &-title {
+      color: clr(white-color);
+      margin-bottom: 96px;
+    }
+
+    &-item {
+      padding-bottom: 30px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(#e3e3e3, 0.5);
+        margin-bottom: 30px;
+      }
+    }
+
+    &-link {
+      @extend %f-center;
+      justify-content: flex-start;
+    }
+
+    &-avatar {
+      flex: 0 0 48px;
+      height: 48px;
+      border-radius: 100%;
+      object-fit: cover;
+      margin-right: 30px;
+    }
+
+    &-name {
+      @extend %prodisplay-bold-font;
+      font-size: 18px;
+      line-height: 133%;
+      margin-bottom: 10px;
+    }
+
+    &-date {
+      @extend %protext-regular-font;
+      font-size: 11px;
+      color: rgba(clr(white-color), 0.5);
+    }
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .stories__features-title {
+    margin-bottom: 40px;
+  }
+  .stories__features-item {
+    padding-bottom: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
