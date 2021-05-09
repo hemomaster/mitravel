@@ -1,3 +1,135 @@
 .footer {
-  background-color: silver;
+  background-color: clr(white-color);
+
+  color: clr(regent-gray-color);
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__top {
+    box-shadow: inset 0px 1px 20px rgba(179, 179, 179, 0.3);
+
+    &-column {
+      flex-basis: 25%;
+      padding: 120px 0;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    &-title {
+      position: relative;
+      @extend %helvetica-bold-font;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #100e0b;
+      text-transform: uppercase;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 1px;
+        background-color: #57a773;
+      }
+    }
+
+    &-list {
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      @extend %prodisplay-medium-font;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    &-subscribe {
+    }
+
+    .subscribe {
+      width: 100%;
+
+      &__label {
+        @extend %f-center;
+        width: 100%;
+        border: 1px solid #e4e4e4;
+        border-radius: 8px;
+        padding: 18.5px 30px;
+        margin-bottom: 16px;
+      }
+      &__field {
+        width: 100%;
+        @extend %prodisplay-medium-font;
+        font-size: 16px;
+        line-height: 150%;
+        border: none;
+        margin-right: 10px;
+        outline-color: clr(regent-gray-color);
+
+        &::placeholder {
+          @extend %prodisplay-medium-font;
+          font-size: 16px;
+          color: rgba(#1b1916, 0.5);
+        }
+
+        &:focus + .icon-user {
+          stroke: rgba(clr(dark-color), 0.95);
+          @include transit(stroke);
+        }
+      }
+      &__submit {
+        width: 100%;
+      }
+      &__icon {
+        flex-shrink: 0;
+        width: 16px;
+        height: 18px;
+        fill: none;
+      }
+      .icon-user {
+        width: 16px;
+        height: 18px;
+        fill: none;
+        stroke: rgba(clr(dark-color), 0.45);
+        @include transit(stroke);
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #d9d9d9;
+    box-shadow: inset 0px 1px 20px rgba(179, 179, 179, 0.3);
+    @extend %protext-regular-font;
+    font-size: 13px;
+    padding: 30px 0;
+
+    &-list {
+      @extend %f-center;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+    }
+  }
 }

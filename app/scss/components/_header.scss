@@ -22,16 +22,17 @@
 
     svg {
       display: block;
+      @include transit(fill);
+    }
+
+    &:hover {
+      svg {
+        fill: clr(accent-color);
+        @include transit(fill);
+      }
     }
   }
-  .icon-facebook {
-    width: 20px;
-    height: 16px;
-  }
-  .icon-twitter {
-    width: 20px;
-    height: 16px;
-  }
+
   .icon-burger {
     width: 48px;
     height: 10px;

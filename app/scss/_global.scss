@@ -43,6 +43,21 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer,
+header {
+  flex: 0 0 auto;
+}
+
 body {
   font: fw(regular) 14px/1.14 $text-font;
   color: clr(white-color);
@@ -92,21 +107,6 @@ body {
   overflow: hidden;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.main {
-  flex: 1 0 auto;
-}
-
-.footer,
-.header {
-  flex: 0 0 auto;
-}
-
 .logo {
   @extend %prodisplay-heavy-font;
   font-size: 22px;
@@ -122,16 +122,33 @@ body {
     display: block;
 
     &:not(:last-child) {
-      margin-right: 40px;
+      margin-right: 30px;
     }
   }
 
   &__link {
     display: block;
+    padding: 5px;
 
     svg {
       display: block;
+      @include transit(fill);
     }
+
+    &:hover {
+      svg {
+        fill: clr(accent-color);
+        @include transit(fill);
+      }
+    }
+  }
+  .icon-facebook {
+    width: 20px;
+    height: 16px;
+  }
+  .icon-twitter {
+    width: 20px;
+    height: 16px;
   }
 }
 
@@ -157,10 +174,12 @@ body {
   line-height: 1.18;
   letter-spacing: 2px;
   text-transform: uppercase;
+  white-space: nowrap;
   padding: 33px 81px;
   background-color: clr(neptune-color);
   border-radius: 8px;
   @include transit(background-color);
+  color: clr(white-color);
 
   &:hover {
     background-color: clr(neptune-hover-color);
@@ -192,11 +211,17 @@ body {
     @extend %prodisplay-medium-font;
     font-size: 16px;
     color: clr(dark-color);
+    outline-color: rgba(clr(dark-color), 0.2);
 
     &::placeholder {
       @extend %prodisplay-medium-font;
       font-size: 16px;
       color: inherit;
+    }
+
+    &:focus + .search-form__submit .icon-search {
+      stroke: rgba(clr(dark-color), 0.95);
+      @include transit(stroke);
     }
   }
 
@@ -207,6 +232,8 @@ body {
   .icon-search {
     width: 18px;
     height: 18px;
+    stroke: rgba(clr(dark-color), 0.45);
+    @include transit(stroke);
   }
 }
 
@@ -301,5 +328,27 @@ body {
   .search-form,
   .main-slider__text {
     height: 90px;
+  }
+}
+
+.hover-link {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    @include transit(transform);
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      @include transit(transform);
+    }
   }
 }

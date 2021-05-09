@@ -21,9 +21,9 @@
 			</path>
 		</symbol>
 		<symbol id="icon-search" viewBox="0 0 20 20">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 			</path>
-			<path d="M19 19L14.65 14.65" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M19 19L14.65 14.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 			</path>
 		</symbol>
 		<symbol id="icon-burger" viewBox="0 0 48 10">
@@ -40,6 +40,12 @@
 			<path clip-rule="evenodd" d="M34 66c17.673 0 32-14.327 32-32C66 16.327 51.673 2 34 2 16.327 2 2 16.327 2 34c0 17.673 14.327 32 32 32z" stroke="#fff" stroke-width="4">
 			</path>
 			<path clip-rule="evenodd" d="M27 24l16 10.286L27 44.57V24v0z" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+			</path>
+		</symbol>
+		<symbol id="icon-user" viewBox="0 0 18 20">
+			<path d="M17 19v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			</path>
+			<path clip-rule="evenodd" d="M9 9a4 4 0 100-8 4 4 0 000 8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 			</path>
 		</symbol>
 	</defs>
