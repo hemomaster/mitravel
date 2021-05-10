@@ -42,9 +42,6 @@
       }
     }
 
-    &-list {
-    }
-
     &-item {
       &:not(:last-child) {
         margin-bottom: 25px;
@@ -56,9 +53,6 @@
       @extend %prodisplay-medium-font;
       font-size: 13px;
       white-space: nowrap;
-    }
-
-    &-subscribe {
     }
 
     .subscribe {
