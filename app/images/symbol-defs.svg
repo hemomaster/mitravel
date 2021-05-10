@@ -16,7 +16,7 @@
 			<path d="M1 8h14M8 1l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 			</path>
 		</symbol>
-		<symbol id="icon-play" viewBox="0 0 34 44">
+		<symbol id="icon-video-play-min" viewBox="0 0 34 44">
 			<path clip-rule="evenodd" d="M1 1l32 20.571L1 42.143V1v0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 			</path>
 		</symbol>

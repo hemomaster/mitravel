@@ -238,29 +238,84 @@ body {
 }
 
 .main-slider {
+  max-width: 100%;
   border-radius: 8px 8px 0 0;
   overflow: hidden;
 
-  // &__btn {
-  // }
+  &__btn {
+    position: absolute;
+    bottom: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    z-index: 10;
 
-  // .btn-left {
-  // }
+    &.btn-prev {
+      left: 30px;
+      right: auto;
 
-  // .btn-right {
-  // }
+      svg {
+        width: 15px;
+        height: 15px;
+        fill: none;
+      }
+    }
 
-  // &__wrapper {
-  // }
+    &.btn-next {
+      right: 30px;
+      left: auto;
+
+      svg {
+        width: 15px;
+        height: 15px;
+        fill: none;
+      }
+    }
+  }
 
   &__media {
+    position: relative;
     height: 280px;
 
-    img {
+    &-img,
+    &-video {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    &-video {
+    }
+
+    &-btn {
+      width: 65px;
+      height: 65px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @extend %f-center;
+      border-radius: 100%;
+      background-color: rgba(clr(dark-color), 0.6);
+      z-index: 1;
+
+      .icon-video-play-min {
+        display: block;
+        width: 32px;
+        height: 42px;
+        fill: none;
+        stroke: clr(white-color);
+        margin-right: -5px;
+        @include transit(stroke);
+      }
+
+      &:hover {
+        .icon-video-play-min {
+          stroke: clr(accent-color);
+          @include transit(stroke);
+        }
+      }
     }
   }
 

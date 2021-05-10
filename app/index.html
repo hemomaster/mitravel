@@ -3,8 +3,11 @@
   Верстка сайта с нуля до выгрузки на хостинг. Адаптивная верстка из Figma.
   https://www.youtube.com/playlist?list=PLCMvV-acWe2A9tnbX678kJ5j9KdHtZSnV
 
-  Часть №7
-  https://youtu.be/70OYxJgkHPg?list=PLCMvV-acWe2A9tnbX678kJ5j9KdHtZSnV&t=463
+  Часть №8. Заключение
+  https://youtu.be/UctKbSgTjR8?t=30
+  
+  Часть №8. Вторая часть.
+  https://youtu.be/4mBf--IFTLU?list=PLCMvV-acWe2A9tnbX678kJ5j9KdHtZSnV&t=16
 -->
 <html lang="en">
   <head>
@@ -124,21 +127,71 @@
                   </svg>
                 </button>
               </form>
-              <div class="hero__bottom-slider main-slider">
-                <div class="swiper-container">
-                  <!-- <button class="btn-reset main-slider__btn btn-left"></button>
-                  <button class="btn-reset main-slider__btn btn-right"></button> -->
+              <div class="hero__bottom-slider">
+                <div class="swiper-container main-slider">
+                  <button class="btn-reset main-slider__btn btn-prev">
+                    <svg class="icon icon-arrow-left">
+                      <use
+                        xlink:href="./images/symbol-defs.svg#icon-arrow-left"
+                      ></use>
+                    </svg>
+                  </button>
+                  <button class="btn-reset main-slider__btn btn-next">
+                    <svg class="icon icon-arrow-right">
+                      <use
+                        xlink:href="./images/symbol-defs.svg#icon-arrow-right"
+                      ></use>
+                    </svg>
+                  </button>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="main-slider__wrapper">
                         <div class="main-slider__media">
-                          <img src="./images/hero-slide-1.jpg" alt="image" />
+                          <button
+                            class="btn-reset main-slider__media-btn"
+                            type="button"
+                            aria-label="play video"
+                          >
+                            <svg class="icon icon-video-play-min">
+                              <use
+                                xlink:href="./images/symbol-defs.svg#icon-video-play-min"
+                              ></use>
+                            </svg>
+                          </button>
+                          <video
+                            class="main-slider__media-video"
+                            src="./videos/1.mp4"
+                            muted
+                            playsinline
+                          ></video>
                         </div>
                         <span class="main-slider__text">wonderful moutain</span>
                       </div>
                     </div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="main-slider__wrapper">
+                        <div class="main-slider__media">
+                          <img
+                            class="main-slider__media-img"
+                            src="./images/lesson-image-1.jpg"
+                            alt="image"
+                          />
+                        </div>
+                        <span class="main-slider__text">wonderful moutain</span>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="main-slider__wrapper">
+                        <div class="main-slider__media">
+                          <img
+                            class="main-slider__media-img"
+                            src="./images/lesson-image-4.jpg"
+                            alt="image"
+                          />
+                        </div>
+                        <span class="main-slider__text">wonderful moutain</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
