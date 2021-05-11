@@ -28,8 +28,8 @@
 
     &::after {
       z-index: -1;
-      background: clr(alto-color) url("../../images/newsletter-bg.jpg")
-        center/cover no-repeat;
+      @extend %placeholder-location;
+      background-image: url("../images/newsletter-bg.jpg");
     }
   }
 
@@ -102,7 +102,7 @@
       width: 100%;
       background-color: clr(white-color);
       @extend %prodisplay-heavy-font;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 150%;
       letter-spacing: 2px;
       border: none;

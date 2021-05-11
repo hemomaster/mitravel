@@ -103,7 +103,10 @@
         </div>
       </header>
       <main class="main">
-        <section class="special-section hero">
+        <section
+          class="special-section hero"
+          style="background-image: url('./images/hero-bg.jpg')"
+        >
           <div class="container hero__container">
             <article class="hero__content">
               <span class="hero__content-label label-info">new book</span>
@@ -286,7 +289,10 @@
             </ul>
           </div>
         </section>
-        <section class="special-section stories">
+        <section
+          class="special-section stories"
+          style="background-image: url('./images/stories-bg.jpg')"
+        >
           <article class="stories__article">
             <div class="container stories__article-container">
               <div class="stories__article-body">
@@ -417,7 +423,10 @@
           </div>
           <div class="swiper-container slider__container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide slide-1">
+              <div
+                class="swiper-slide"
+                style="background-image: url('./images/videos-slide-1.jpg')"
+              >
                 <button class="btn-reset videos__play" type="button">
                   <svg class="icon icon-video-play">
                     <use
@@ -429,7 +438,10 @@
                   A Guide To Rocky Mountain Vacations
                 </h3>
               </div>
-              <div class="swiper-slide slide-2">
+              <div
+                class="swiper-slide"
+                style="background-image: url('./images/videos-slide-2.jpg')"
+              >
                 <button class="btn-reset videos__play" type="button">
                   <svg class="icon icon-video-play">
                     <use
@@ -441,7 +453,10 @@
                   A Guide To Rocky Mountain Vacations
                 </h3>
               </div>
-              <div class="swiper-slide slide-3">
+              <div
+                class="swiper-slide"
+                style="background-image: url('./images/videos-slide-3.jpg')"
+              >
                 <button class="btn-reset videos__play" type="button">
                   <svg class="icon icon-video-play">
                     <use
@@ -487,10 +502,22 @@
                 </p>
               </article>
               <form class="form-signup newsletter__form" action="server.php">
+                <input
+                  type="hidden"
+                  name="admin_email[]"
+                  value="hemomaster@gmail.com"
+                />
+                <input
+                  type="hidden"
+                  name="form_subject"
+                  value="Заявка с сайта Mitravel"
+                />
+
                 <div class="form-signup__group">
                   <label class="form-signup__label">
                     <input
                       class="form-signup__field"
+                      data-validate-field="fio"
                       type="text"
                       name="user_name"
                       placeholder="Name..."
@@ -501,6 +528,7 @@
                   <label class="form-signup__label">
                     <input
                       class="form-signup__field"
+                      data-validate-field="email"
                       type="email"
                       name="user_email"
                       placeholder="Email..."
@@ -511,6 +539,7 @@
                   <label class="form-signup__label">
                     <input
                       class="form-signup__field"
+                      data-validate-field="tel"
                       type="tel"
                       name="user_tel"
                       placeholder="Phone number..."
@@ -871,9 +900,20 @@
                 action="server.php"
                 method="post"
               >
+                <input
+                  type="hidden"
+                  name="admin_email[]"
+                  value="hemomaster@gmail.com"
+                />
+                <input
+                  type="hidden"
+                  name="form_subject"
+                  value="Заявка на подписку с сайта Mitravel"
+                />
                 <label class="subscribe__label">
                   <input
                     class="subscribe__field"
+                    data-validate-field="email"
                     type="email"
                     name="user_email"
                     placeholder="Your email..."

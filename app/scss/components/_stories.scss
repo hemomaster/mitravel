@@ -1,7 +1,6 @@
 .stories {
   position: relative;
-  background: clr(alto-color) url("../../images/stories-bg.jpg") center/cover
-    no-repeat;
+  @extend %placeholder-location;
 
   &__article {
     position: absolute;

@@ -1,7 +1,6 @@
 .hero {
   position: relative;
-  background: clr(alto-color) url("../../images/hero-bg.jpg") center top/cover
-    no-repeat;
+  @extend %placeholder-location;
 
   &::before {
     content: "";

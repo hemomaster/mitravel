@@ -37,10 +37,7 @@
       @include transit(transform);
       border-radius: 8px;
       overflow: hidden;
-      background-color: clr(alto-color);
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
+      @extend %placeholder-location;
       padding: 40px;
       display: flex;
       align-items: flex-end;
@@ -67,16 +64,6 @@
         );
         opacity: 0;
         @include transit(opacity);
-      }
-
-      &.slide-1 {
-        background-image: url("../../images/videos-slide-1.jpg");
-      }
-      &.slide-2 {
-        background-image: url("../../images/videos-slide-2.jpg");
-      }
-      &.slide-3 {
-        background-image: url("../../images/videos-slide-3.jpg");
       }
 
       &-active {

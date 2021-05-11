@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     nav = document.getElementById("nav"),
     burger = document.getElementById("burger"),
     videoPlayBtns = document.querySelectorAll(".main-slider__media-btn"),
-    videos = document.querySelectorAll(".main-slider__media-video");
+    videos = document.querySelectorAll(".main-slider__media-video"),
+    telFields = document.querySelectorAll("input[type='tel']");
 
   // swiper 1
   const swiperMainSlider = new Swiper(mainSlider, {
@@ -66,7 +67,55 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 
+  // SCROLL SMOOTH
+  // к якорным ссылкам добавить класс scroll-link
+  const scrollToElem = (el) => {
+    document.querySelector(el).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  {
+    const scrollLinks = document.querySelectorAll("a.scroll-link");
+    scrollLinks.forEach((link) => {
+      link.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        scrollToElem(link.getAttribute("href"));
+      });
+    });
+  }
+
   // inputMask
+  Inputmask("+38 (999) 999-99-99").mask(telFields);
 
   // validate forms
+  const validateForm = (selector, rules) => {
+    new window.JustValidate(selector, {
+      rules,
+      submitHandler: function (form) {
+        const data = new FormData(form);
+
+        fetch(form.action, {
+          method: "POST",
+          body: data,
+        })
+          .then((response) => {
+            if (response.ok) return response.text();
+            else new Error(response);
+          })
+          .then((data) => console.log(data))
+          .catch((err) => console.log(`Ошибка: ${err}`))
+          .finally(() => {
+            form.reset();
+          });
+      },
+    });
+  };
+
+  validateForm(".newsletter__form", {
+    fio: { required: true },
+    email: { required: true, email: true },
+    tel: { required: true },
+  });
 });
