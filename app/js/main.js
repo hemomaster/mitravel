@@ -35,7 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
     centeredSlides: true,
     slidesPerView: "auto",
     loop: true,
-    spaceBetween: 100,
+    spaceBetween: 15,
+    breakpoints: {
+      460: {
+        spaceBetween: 50,
+      },
+      // when window width is >= 768px
+      768: {
+        spaceBetween: 100,
+      },
+    },
   });
 
   // navigation menu

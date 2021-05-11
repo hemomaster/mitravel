@@ -8,6 +8,7 @@
 
   &__container {
     @extend %f-center;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -15,6 +16,10 @@
   &__logo,
   &__burger {
     color: clr(white-color);
+  }
+
+  &__logo {
+    padding: 0 10px;
   }
 
   &__burger {

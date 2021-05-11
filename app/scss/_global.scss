@@ -211,6 +211,7 @@ body {
     @extend %prodisplay-medium-font;
     font-size: 16px;
     color: clr(dark-color);
+    background: transparent;
     outline-color: rgba(clr(dark-color), 0.2);
 
     &::placeholder {
@@ -283,9 +284,7 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    &-video {
+      background-color: clr(alto-color);
     }
 
     &-btn {

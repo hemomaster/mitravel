@@ -2,11 +2,13 @@
   &__title {
     margin-bottom: 25px;
   }
+
   &__descr {
     max-width: 635px;
     margin: 0 auto;
     margin-bottom: 90px;
   }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -14,6 +16,7 @@
     grid-column-end: span 2;
     gap: 30px;
   }
+
   &__item {
     border-radius: 8px;
     overflow: hidden;
@@ -26,6 +29,7 @@
       min-height: 700px;
     }
   }
+
   &__link {
     position: relative;
     display: block;
@@ -49,6 +53,7 @@
         rgba(0, 0, 0, 0.7) 100%
       );
     }
+
     &-content {
       position: relative;
       z-index: 1;

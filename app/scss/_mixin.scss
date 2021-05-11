@@ -27,7 +27,7 @@ FUNCTION AND MIXIN
   @if map-has-key($fontsize, $key) {
     @return map-get($fontsize, $key);
   }
-  @warn "Unknown `#{$key}` in $fontsize.";
+  @warn "<<< Unknown `#{$key}` in $fontsize.";
   @return null;
 }
 
@@ -37,7 +37,7 @@ FUNCTION AND MIXIN
   @if map-has-key($fontweidth, $key) {
     @return map-get($fontweidth, $key);
   }
-  @warn "Unknown `#{$key}` in $fontweidth.";
+  @warn "<<< Unknown `#{$key}` in $fontweidth.";
   @return null;
 }
 
@@ -107,7 +107,7 @@ html {
       @content;
     }
   } @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$point}`. "
+    @warn "<<< Unfortunately, no value could be retrieved from `#{$point}`. "
         + "Please make sure it is defined in `$breakpoint-to` map.";
   }
 }
@@ -119,7 +119,7 @@ html {
       @content;
     }
   } @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$point}`. "
+    @warn "<<< Unfortunately, no value could be retrieved from `#{$point}`. "
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
