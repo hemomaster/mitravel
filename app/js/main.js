@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     videoPlayBtns = document.querySelectorAll(".main-slider__media-btn"),
     videos = document.querySelectorAll(".main-slider__media-video"),
     telFields = document.querySelectorAll("input[type='tel']");
+  const pass = "mR6Evr18giCff5qw";
 
   // swiper 1
   const swiperMainSlider = new Swiper(mainSlider, {
@@ -87,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // inputMask
-  Inputmask("+38 (999) 999-99-99").mask(telFields);
+  Inputmask("+380 (99) 999-99-99").mask(telFields);
 
   // validate forms
   const validateForm = (selector, rules) => {
@@ -101,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
           body: data,
         })
           .then((response) => {
-            if (response.ok) return response.text();
+            if (response.ok) return response.json();
             else new Error(response);
           })
           .then((data) => console.log(data))
@@ -117,5 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
     fio: { required: true },
     email: { required: true, email: true },
     tel: { required: true },
+  });
+
+  validateForm(".subscribe", {
+    email: { required: true, email: true },
   });
 });

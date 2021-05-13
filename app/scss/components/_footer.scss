@@ -1,6 +1,5 @@
 .footer {
   background-color: clr(white-color);
-
   color: clr(regent-gray-color);
 
   &__container {
@@ -56,6 +55,7 @@
       width: 100%;
 
       &__label {
+        position: relative;
         @extend %f-center;
         width: 100%;
         border: 1px solid #e4e4e4;
@@ -63,41 +63,54 @@
         padding: 18.5px 30px;
         margin-bottom: 16px;
       }
+
       &__field {
         width: 100%;
         @extend %prodisplay-medium-font;
         font-size: 16px;
         line-height: 150%;
-        border: none;
+        color: rgba(#1b1916, 0.5);
+        border: none !important;
         margin-right: 10px;
         outline-color: clr(regent-gray-color);
 
         &::placeholder {
           @extend %prodisplay-medium-font;
           font-size: 16px;
-          color: rgba(#1b1916, 0.5);
+          color: currentColor;
+
+          &:focus {
+            color: clr(dark-color);
+
+            & + .icon-user {
+              stroke: rgba(clr(dark-color), 0.95);
+              @include transit(stroke);
+            }
+          }
         }
 
-        &:focus + .icon-user {
-          stroke: rgba(clr(dark-color), 0.95);
+        &__submit {
+          width: 100%;
+        }
+
+        &__icon {
+          flex-shrink: 0;
+          width: 16px;
+          height: 18px;
+          fill: none;
+        }
+
+        .icon-user {
+          width: 16px;
+          height: 18px;
+          fill: none;
+          stroke: rgba(clr(dark-color), 0.45);
           @include transit(stroke);
         }
       }
+
       &__submit {
         width: 100%;
-      }
-      &__icon {
-        flex-shrink: 0;
-        width: 16px;
-        height: 18px;
-        fill: none;
-      }
-      .icon-user {
-        width: 16px;
-        height: 18px;
-        fill: none;
-        stroke: rgba(clr(dark-color), 0.45);
-        @include transit(stroke);
       }
     }
   }
@@ -116,12 +129,6 @@
     &-list {
       @extend %f-center;
       gap: 30px;
-    }
-
-    &-item {
-      // &:not(:last-child) {
-      //   margin-right: 30px;
-      // }
     }
 
     &-link {
