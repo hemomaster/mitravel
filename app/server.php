@@ -1,5 +1,5 @@
 <?php
-sleep(1);
+sleep(3);
 
 $admin_email = array();
 foreach ( $_POST as $key => $value ) {

@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     burger = document.getElementById("burger"),
     videoPlayBtns = document.querySelectorAll(".main-slider__media-btn"),
     videos = document.querySelectorAll(".main-slider__media-video"),
-    telFields = document.querySelectorAll("input[type='tel']");
+    telFields = document.querySelectorAll("input[type='tel']"),
+    formsSend = document.querySelectorAll(".form-sending");
   const pass = "mR6Evr18giCff5qw";
 
   // swiper 1
@@ -90,13 +91,48 @@ document.addEventListener("DOMContentLoaded", () => {
   // inputMask
   Inputmask("+380 (99) 999-99-99").mask(telFields);
 
-  // validate forms
+  // validating and submitting forms
+
+  const createSpinner = () => {
+    const el = document.createElement("div");
+    el.className = "spinner";
+    el.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="spinner-body">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>`
+    );
+
+    return el;
+  };
+
+  const toggleLoader = (form) => {
+    if (form.classList.contains("overlay-loading")) {
+      // spinner есть - удаляем
+      form.querySelector(".spinner").remove();
+      form.classList.remove("overlay-loading");
+    } else {
+      // spinner нет - добавляем
+      form.classList.add("overlay-loading");
+      form.insertAdjacentElement("beforeend", createSpinner());
+    }
+  };
+
   const validateForm = (selector, rules) => {
     new window.JustValidate(selector, {
       rules,
       submitHandler: function (form) {
         const data = new FormData(form);
 
+        toggleLoader(form);
         fetch(form.action, {
           method: "POST",
           body: data,
@@ -108,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .then((data) => console.log(data))
           .catch((err) => console.log(`Ошибка: ${err}`))
           .finally(() => {
+            toggleLoader(form);
             form.reset();
           });
       },

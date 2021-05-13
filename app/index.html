@@ -11,6 +11,9 @@
 
   Js-плагины №2. Как сделать валидацию и маску для телефона
   https://youtu.be/h5fSz30CLQ4?t=21
+
+  Верстка валидация и отправка формы без перезагрузки
+  https://youtu.be/PqTrhfjLQBI?t=2154
 -->
 <html lang="en">
   <head>
@@ -520,7 +523,6 @@
                       type="text"
                       name="user_name"
                       placeholder="Name..."
-                      required
                     />
                     <span class="form-signup__bar"></span>
                   </label>
@@ -528,10 +530,9 @@
                     <input
                       class="form-signup__field"
                       data-validate-field="email"
-                      type="email"
+                      type="text"
                       name="user_email"
                       placeholder="Email..."
-                      required
                     />
                     <span class="form-signup__bar"></span>
                   </label>
@@ -542,7 +543,6 @@
                       type="tel"
                       name="user_tel"
                       placeholder="Phone number..."
-                      required
                     />
                     <span class="form-signup__bar"></span>
                   </label>
@@ -913,10 +913,9 @@
                   <input
                     class="subscribe__field"
                     data-validate-field="email"
-                    type="email"
+                    type="text"
                     name="user_email"
                     placeholder="Your email..."
-                    required
                   />
                   <svg class="icon icon-user subscribe__icon">
                     <use xlink:href="./images/symbol-defs.svg#icon-user"></use>
